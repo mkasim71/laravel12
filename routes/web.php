@@ -30,5 +30,5 @@ Route::get('/authors/{user:username}', function (User $user) {
 });
 
 Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts', ['title' => count($category->posts) . ' Articels in: ' . $category->name, 'posts' => $category->posts]);
+    return view('posts', ['title' => count($category->posts) . ' Articels by ' . $category->name, 'posts' => $category->posts]);
 });
